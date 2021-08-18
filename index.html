@@ -1,0 +1,35 @@
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<title>
+3D PRINTING MATERIAL PREDICITION
+</title>
+</head>
+<body>
+
+<div class='idiv'>
+</br>
+</br>
+<i><h1>3D PRINTING MATERIAL PREDICITION</h1></i>
+<form action="{{url_for('predict')}}" method="POST">
+<input type="text" name="Layer height" placeholder="Enter the Layer height "required="required" /><br><br>
+<input type="text" name="Wall thickness" placeholder="Enter the Wall thickness" required="required" /><br><br>
+<input type="text" name="Infill density " placeholder="Enter the Infill density " required="required" /><br><br>
+<input type="text" name="Infill pattern " placeholder="Enter the Infill pattern " required="required" /><br><br>
+<input type="text" name="Noozle temperature" placeholder="Enter the Noozle temperature" required="required" /><br><br>
+<input type="text" name="Bed temperature" placeholder="Enter the Bed temperature " required="required" /><br><br>
+<input type="text" name="Print speed" placeholder="Enter the Print speed " required="required" /><br><br>
+<input type="text" name="Fan speed" placeholder="Enter the Fan speed " required="required" /><br><br>
+<input type="text" name="Roughness" placeholder="Enter the Roughness " required="required" /><br><br>
+<input type="text" name="Tension strenght" placeholder="Enter the Tension strenght" "required="required" /><br><br>
+<input type="text" name="Elongation" placeholder="Enter the Elongation" "required="required" /><br><br>
+
+<button type="submit">Predict</button>
+</form>
+<br/>
+<br/>
+<h2>{{prediction_text}}</h2>
+<br/>
+</div>
+</body>
+</html>
